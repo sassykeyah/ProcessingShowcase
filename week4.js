@@ -3,7 +3,12 @@
 */
 let img; // Declare variable 'img'.
 
-function earth() {
+function logoBox() {
+  square(50,50, 400);
+    
+  image(img, 50, 50, 400, 400);
+}
+function logoLemon() {
     
     fill(0, 200, 0);
     strokeWeight(8);
@@ -15,7 +20,11 @@ function earth() {
     arc(250, 250, 150, 200, HALF_PI, PI + HALF_PI);
     
   }
+function logoText(){
 
+  textSize(14);
+text('Font Size 14', 10, 60);
+}
 function setup() {
     createCanvas(500, 500);
     img = loadImage('assets/forest.jpg'); // Load the image
@@ -25,9 +34,8 @@ function setup() {
     background(220);
     
     stroke('rgb(0,0,0)');
-    square(50,50, 400);
-    
-    image(img, 50, 50, 400, 400);
-    earth();
+    logoBox();
+    logoLemon();
+    logoText();
 
   }
