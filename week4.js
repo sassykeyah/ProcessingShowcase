@@ -7,18 +7,18 @@ function earth() {
     
     fill(0, 200, 0);
     strokeWeight(8);
-    stroke('rgb(0,200,0)');
-    circle(250,250,100); 
-    fill(0, 0, 200);
-    arc(250, 250, 100, 100, HALF_PI + QUARTER_PI, PI + QUARTER_PI);
-    fill(0, 0, 200);
-    arc(250, 250, 100, 100, PI +HALF_PI + QUARTER_PI, TWO_PI + QUARTER_PI);
+    stroke('rgb(0,0,0)');
+
+    fill(246, 229, 20);
+    arc(250, 250, 200, 200, HALF_PI, PI + HALF_PI,CHORD);
+    fill(247, 235, 95 );
+    arc(250, 250, 150, 200, HALF_PI, PI + HALF_PI);
     
   }
 
 function setup() {
     createCanvas(500, 500);
-    img = loadImage('assets/fire.jpg'); // Load the image
+    img = loadImage('assets/forest.jpg'); // Load the image
   }
   
   function draw() {
