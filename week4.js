@@ -1,60 +1,66 @@
 /*
     Paste the code for your week 4 exercise below.
 */
-let img; // Declare variable 'img'.
 
+let img; 
 
-
-let lemonFont;
-
-function preLoad() {
-  lemonFont = loadFont('assets/FunctionPro-Bold-webfont.ttf');
-}
-
-function logoBox() {
-  strokeWeight(8);
-  stroke('rgb(0,0,0)');
-  fill(248, 172, 199);
+// Writes the Logo Image
+function logoImage() {
+ 
   square(50, 50, 400);
-
-
-  //image(img, 50, 50, 400, 400);
+  image(img, 50, 50, 400, 400);
 }
-function logoLemon() {
 
-  fill(0, 200, 0);
+// Writes the Logo Shape & Colour
+function logoShape() {
+
+  let lemonLogoCentreX;
+  let lemonLogoCentreY;
+  let lemonLogoHeight;
+
+  lemonLogoCentreX = 275;
+  lemonLogoCentreY = 250;
+  lemonLogoHeight = 200;
+
+  // Lemon Shape
   strokeWeight(8);
-  stroke('rgb(0,0,0)');
-
   fill(246, 229, 20);
-  arc(250, 250, 200, 200, HALF_PI, PI + HALF_PI, CHORD);
+  arc(lemonLogoCentreX, lemonLogoCentreY, 200, lemonLogoHeight, HALF_PI, PI + HALF_PI, CHORD);
   fill(247, 235, 95);
-  arc(250, 250, 150, 200, HALF_PI, PI + HALF_PI);
+  arc(lemonLogoCentreX, lemonLogoCentreY, 150, lemonLogoHeight, HALF_PI, PI + HALF_PI);
 
+// Lemon Lines
+  strokeWeight(3);
+  
+  line(lemonLogoCentreX, lemonLogoCentreY, lemonLogoCentreX - 60, lemonLogoCentreY + 64);
+  line(lemonLogoCentreX, lemonLogoCentreY, lemonLogoCentreX - 60, lemonLogoCentreY - 64);
+  line(lemonLogoCentreX, lemonLogoCentreY, lemonLogoCentreX - 75, lemonLogoCentreY );
 }
-function logoText() {
+
+// Writes the Logo Typography
+function logoTypography() {
+
   textWrap(CHAR);
   textStyle(BOLDITALIC);
-  
   strokeWeight(0);
   textSize(50);
+  fill(0,0,0);
   text('LUCYS', 170, 120, );
   text('LEMONS', 150, 410 );
-
 }
-function setup() {
-  createCanvas(500, 500);
-  img = loadImage('assets/forest.jpg'); // Load the image
 
+function setup() {
+
+  createCanvas(500, 500);
+  img = loadImage('assets/backgroundlemon.jpg');
 
 }
 
 function draw() {
-  background(220);
 
+  background(250,150,195);
   stroke('rgb(0,0,0)');
-  logoBox();
-  logoLemon();
-  logoText();
-
+  logoImage();
+  logoShape();
+  logoTypography();
 }
