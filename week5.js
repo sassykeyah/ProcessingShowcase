@@ -54,14 +54,13 @@ function draw() {
     line(x, y, x - 60, y - 64);
     line(x, y, x - 75, y );
  
+   // Moving up at a constant speed
+   y = y - 1;
   
-  // Jiggling randomly on the horizontal axis
-  x = x + random(-3, 3);
-  // Moving up at a constant speed
-  y = y - 1;
-  
-  // Reset to the bottom
-  if (y < 0) {
-    y = height;
-  }
+   // Reset to the bottom
+   if (y < 0) {
+     y = height;
+   }
+ 
+ 
 }
